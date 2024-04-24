@@ -1,0 +1,48 @@
+<form [formGroup]="modelForm" (submit)="onSubmit()" class="custom-form">
+  <!-- Brand Id Input -->
+  <div class="form-group">
+    <label for="brandId">Brand Id:</label>
+    <input type="text" class="form-control" id="brandId" formControlName="brandId">
+    <div *ngIf="modelForm.get('brandId')?.invalid && (modelForm.get('brandId')?.dirty || modelForm.get('brandId')?.touched)">
+      <span>{{ modelForm.get('brandId')?.errors | controlErrorMessage }}</span>
+    </div>
+  </div>
+
+  <!-- Name Input -->
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+    <div *ngIf="modelForm.get('name')?.invalid && (modelForm.get('name')?.dirty || modelForm.get('name')?.touched)">
+      <span>{{ modelForm.get('name')?.errors | controlErrorMessage }}</span>
+    </div>
+  </div>
+
+  <!-- Model Year Input -->
+  <div class="form-group">
+    <label for="modelYear">Model Year:</label>
+    <input type="number" class="form-control" id="modelYear" formControlName="modelYear">
+    <div *ngIf="modelForm.get('modelYear')?.invalid && (modelForm.get('modelYear')?.dirty || modelForm.get('modelYear')?.touched)">
+      <span>{{ modelForm.get('modelYear')?.errors | controlErrorMessage }}</span>
+    </div>
+  </div>
+
+  <!-- Image Url Input -->
+  <div class="form-group">
+    <label for="imageUrl">Image Url:</label>
+    <input type="text" class="form-control" id="imageUrl" formControlName="imageUrl">
+    <div *ngIf="modelForm.get('imageUrl')?.invalid && (modelForm.get('imageUrl')?.dirty || modelForm.get('imageUrl')?.touched)">
+      <span>{{ modelForm.get('imageUrl')?.errors | controlErrorMessage }}</span>
+    </div>
+  </div>
+
+  <!-- Daily Price Input -->
+  <div class="form-group">
+    <label for="dailyPrice">Daily Price:</label>
+    <input type="number" class="form-control" id="dailyPrice" formControlName="dailyPrice">
+    <div *ngIf="modelForm.get('dailyPrice')?.invalid && (modelForm.get('dailyPrice')?.dirty || modelForm.get('dailyPrice')?.touched)">
+      <span>{{ modelForm.get('dailyPrice')?.errors | controlErrorMessage }}</span>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

@@ -1,0 +1,7 @@
+<h1>{{  modelDetails.brand.name | uppercase  }}</h1>
+<h2>{{  modelDetails.name  }}</h2>
+<!-- <p>{{modelDetails.dailyPrice | currency :"₺" }}</p>    -->
+<p>{{  modelDetails.dailyPrice |  vatAdd: 10 | currency :"₺"  }}</p>   
+<!-- <p>{{modelDetails.dailyPrice |  number }}</p>    -->
+<!-- <p>{{  dateNow | date  }}</p> -->
+<p>{{ modelDetails.brand.name| titlecase}}</p>     <!--  metnin her kelimesinin baş harfini büyük yapar -->

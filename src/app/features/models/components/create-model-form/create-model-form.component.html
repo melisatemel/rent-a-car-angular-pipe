@@ -1,0 +1,12 @@
+<form [formGroup]="modelForm" (submit)="onSubmit()">
+    <!-- Name Input -->
+    Brand Id: <input type="number" formControlName="brandId" />
+    Name: <input type="text" formControlName="name" />
+    Model Year: <input type="number" formControlName="modelYear" />
+    Image Url: <input type="text" formControlName="imageUrl" />
+    Daily Price: <input type="number" formControlName="dailyPrice" />
+
+
+    <button (click)="onSubmit()" type="submit">Submit</button>
+  </form>
+  
